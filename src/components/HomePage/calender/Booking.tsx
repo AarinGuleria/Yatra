@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { FaCalendarAlt, FaUser } from 'react-icons/fa';
 import { FiSearch } from 'react-icons/fi';
 import DatePicker from 'react-datepicker';
+import { offset } from '@floating-ui/dom';
 import 'react-datepicker/dist/react-datepicker.css';
 
 const Booking: React.FC = () => {
@@ -115,14 +116,7 @@ const Booking: React.FC = () => {
               dateFormat="dd MMM yyyy"
               className="text-sm font-bold bg-transparent focus:outline-none text-gray-800 dark:text-gray-200 cursor-pointer w-full sm:w-auto"
               popperPlacement="bottom-start"
-              popperModifiers={[
-                {
-                  name: 'offset',
-                  options: {
-                    offset: [0, 8],
-                  },
-                },
-              ]}
+              popperModifiers={[offset(8)]}
             />
           </div>
         </div>
@@ -138,14 +132,7 @@ const Booking: React.FC = () => {
               dateFormat="dd MMM yyyy"
               className="text-sm font-bold bg-transparent focus:outline-none text-gray-800 dark:text-gray-200 cursor-pointer w-full sm:w-auto"
               popperPlacement="bottom-start"
-              popperModifiers={[
-                {
-                  name: 'offset',
-                  options: {
-                    offset: [0, 8],
-                  },
-                },
-              ]}
+              popperModifiers={[offset(8)]}
             />
           </div>
         </div>
